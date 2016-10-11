@@ -1,10 +1,11 @@
-package main
+package basics
 
 import (
 	"fmt"
 	"math/rand"
 )
 
-func main() {
+// Packages is ..
+func Packages() {
 	fmt.Println("My favovate number is ", rand.Intn(100))
 }
