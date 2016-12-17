@@ -72,9 +72,9 @@ func init()  {
 
 	boxes := BoxList{Box{1, 2, 3, WHITE}, Box{1, 9, 3, YELLOW}, Box{1.8, 2.9, 3.9, BLACK}}
 
-	boxes[len(boxes)-1].setColor(RED)
-
 	fmt.Println("boxes length:", len(boxes))
 	fmt.Println("get a box color:", boxes[len(boxes)-1].color)
+	boxes[len(boxes)-1].setColor(RED)
+	fmt.Println("new color:", boxes[len(boxes)-1].color)
 	fmt.Println("the max box color:", boxes.getBiggestBoxColor())
 }
