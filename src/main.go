@@ -10,6 +10,14 @@ type person struct {
 	age  int
 }
 
+func older(p1, p2 person)(person, int)  {
+	if p1.age > p2.age {
+		return p1, p1.age -p2.age
+	}
+
+	return p2, p2.age - p1.age
+}
+
 func add(x int, y int)(z int)  {
 	return x + y
 }
@@ -24,11 +32,17 @@ func max(x, y int)int  {
 func init()  {
 	fmt.Println("main package init")
 }
+
 func main() {
-	var P person
-	P.name = "spence"
-	P.age = 29
-	fmt.Println(P.name)
+	var P1, P2 person
+	P1.name = "spence"
+	P1.age = 29
+	fmt.Println(P1.name)
+	P2.name = "jin"
+	P2.age = 28
+	fmt.Println(P2.name)
+
+	fmt.Println(older(P1, P2))
 
 	var i int = 5
 	fmt.Println(i)
@@ -100,7 +114,8 @@ func main() {
 
 	}
 
-	fmt.Println(add(i, P.age))
+	fmt.Println(add(i, P1.age))
 
 	basics.Imports(3.14)
+
 }
