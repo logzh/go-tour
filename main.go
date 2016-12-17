@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"./src/basics"
 )
 
 type person struct {
@@ -20,6 +21,9 @@ func max(x, y int)int  {
 	return y
 }
 
+func init()  {
+	fmt.Println("main package init")
+}
 func main() {
 	var P person
 	P.name = "spence"
@@ -97,4 +101,6 @@ func main() {
 	}
 
 	fmt.Println(add(i, P.age))
+
+	basics.Imports(3.14)
 }
